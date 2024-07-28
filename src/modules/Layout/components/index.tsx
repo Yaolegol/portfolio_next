@@ -6,5 +6,5 @@ interface IProps {
 }
 
 export const Layout: FC<IProps> = ({ children }) => {
-    return <div className={style.main}>{children}</div>;
+    return <div className={style.layout}>{children}</div>;
 };
