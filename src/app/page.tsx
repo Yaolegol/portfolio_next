@@ -1,5 +1,5 @@
-import { Home } from '@/modules/Home/components';
-import { Layout } from '@/modules/Layout/components';
+import { Home } from '@/modules/Home';
+import { Layout } from '@/modules/Layout';
 import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
