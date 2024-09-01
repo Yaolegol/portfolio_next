@@ -1,0 +1,25 @@
+.index {
+  cursor: pointer;
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  display: block;
+}
+
+.buttonOpen {
+  cursor: pointer;
+}
+
+.contentArea {
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+
+  .open & {
+    display: block;
+  }
+}
