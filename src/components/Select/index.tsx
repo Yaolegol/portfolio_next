@@ -48,7 +48,7 @@ export const Select: FC<IProps> = ({ onSelect, options }) => {
 
       return (
         <button
-          className={style.button}
+          className={style.optionButton}
           key={value}
           onClick={handleOptionClick(option)}
           type="button"
@@ -65,13 +65,14 @@ export const Select: FC<IProps> = ({ onSelect, options }) => {
       ref={ref}
     >
       <button
-        className={style.buttonOpen}
-        onClick={handleClick}
-        onBlur={handleBlur}
-        type="button"
-      >
-        {selectedValue.label}
-      </button>
+          className={style.buttonOpen}
+          onClick={handleClick}
+          onBlur={handleBlur}
+          type="button"
+        >
+          {selectedValue.label}
+          <span className={style.iconArrow}>></span>
+        </button>
       <div className={style.contentArea}>{_options}</div>
     </div>
   );
