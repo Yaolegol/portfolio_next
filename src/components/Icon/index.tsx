@@ -10,7 +10,7 @@ interface IProps {
 
 export const Icon: FC<IProps> = ({ className, name }) => {
   return (
-    <svg className={stylesConcat(style.main, className)}>
+    <svg className={stylesConcat(style.index, className)}>
       <use xlinkHref={`${sprite}#${name}`} />
     </svg>
   );
