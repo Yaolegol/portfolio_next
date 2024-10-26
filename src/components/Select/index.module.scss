@@ -5,6 +5,7 @@
 }
 
 .buttonOpen {
+  align-items: center;
   border: 1px solid $gray-10;
   border-radius: 8px;
   cursor: pointer;
@@ -30,11 +31,10 @@
 }
 
 .iconArrow {
-  display: block;
-  transform: rotate(90deg);
+  color: $gray-10;
 
   .open & {
-    transform: rotate(-90deg);
+    transform: rotate(180deg);
   }
 }
 

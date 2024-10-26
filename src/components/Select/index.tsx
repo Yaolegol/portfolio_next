@@ -1,5 +1,6 @@
 'use client';
 
+import { Icon } from '@/components/Icon';
 import { stylesConcat } from '@/helpers/styles';
 import { FC, FocusEvent, useCallback, useMemo, useRef, useState } from 'react';
 import style from './index.module.scss';
@@ -65,14 +66,14 @@ export const Select: FC<IProps> = ({ onSelect, options }) => {
       ref={ref}
     >
       <button
-          className={style.buttonOpen}
-          onClick={handleClick}
-          onBlur={handleBlur}
-          type="button"
-        >
-          {selectedValue.label}
-          <span className={style.iconArrow}>></span>
-        </button>
+        className={style.buttonOpen}
+        onClick={handleClick}
+        onBlur={handleBlur}
+        type="button"
+      >
+        {selectedValue.label}
+        <Icon className={style.iconArrow} name="arrow" />
+      </button>
       <div className={style.contentArea}>{_options}</div>
     </div>
   );
