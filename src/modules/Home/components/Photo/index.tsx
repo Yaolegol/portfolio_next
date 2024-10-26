@@ -7,7 +7,6 @@ export const Photo: FC = () => {
             <img
                 alt="Oleg Oleinik"
                 className={style.image}
-                loading="lazy"
                 src="/images/avatar.webp"
             />
         </div>
