@@ -1,8 +1,8 @@
 'use client';
 
 import { IOption, Select } from '@/components/Select';
-import { useLangSelect } from '@/modules/Lang/context/hooks';
-import { FC, useCallback } from 'react';
+import { LangContext } from '@/modules/Lang/context';
+import { FC, useCallback, useContext } from 'react';
 import style from './index.module.scss';
 
 const selectOptions = [
@@ -17,13 +17,32 @@ const selectOptions = [
 ];
 
 export const SelectLang: FC = () => {
-    const { setData } = useLangSelect();
+    const { setLangOption, setLangText } = useContext(LangContext);
+
+    const fetchText = useCallback(
+        async ({ value }: IOption) => {
+            try {
+                const response = await fetch(`/text/home/${value}/index.json`);
+                const text = await response.json();
+
+                if (!response.ok) {
+                    return;
+                }
+
+                setLangText?.(text);
+            } catch (e) {
+                console.log(e);
+            }
+        },
+        [setLangText],
+    );
 
     const handleSelect = useCallback(
         (option: IOption) => {
-            setData?.(option);
+            setLangOption?.(option);
+            fetchText(option);
         },
-        [setData],
+        [fetchText, setLangOption],
     );
 
     return (
