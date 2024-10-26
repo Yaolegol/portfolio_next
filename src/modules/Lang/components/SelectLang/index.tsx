@@ -6,29 +6,29 @@ import { FC, useCallback } from 'react';
 import style from './index.module.scss';
 
 const selectOptions = [
-  {
-    label: 'RU',
-    value: 'RU',
-  },
-  {
-    label: 'EN',
-    value: 'EN',
-  },
+    {
+        label: 'RU',
+        value: 'RU',
+    },
+    {
+        label: 'EN',
+        value: 'EN',
+    },
 ];
 
 export const SelectLang: FC = () => {
-  const { setData } = useLangSelect();
+    const { setData } = useLangSelect();
 
-  const handleSelect = useCallback(
-    (option: IOption) => {
-      setData?.(option);
-    },
-    [setData],
-  );
+    const handleSelect = useCallback(
+        (option: IOption) => {
+            setData?.(option);
+        },
+        [setData],
+    );
 
-  return (
-    <div className={style.index}>
-      <Select onSelect={handleSelect} options={selectOptions} />
-    </div>
-  );
+    return (
+        <div className={style.index}>
+            <Select onSelect={handleSelect} options={selectOptions} />
+        </div>
+    );
 };

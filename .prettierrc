@@ -1,5 +1,6 @@
 {
-  "indentation": 2,
-  "singleQuote": true,
-  "trailingComma": "all"
+    "indentation": 4,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "all"
 }

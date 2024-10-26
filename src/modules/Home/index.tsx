@@ -5,14 +5,15 @@ import { FC } from 'react';
 import style from './index.module.scss';
 
 export const Home: FC = () => {
-  return (
-    <LangContextProvider>
-      <div className={style.index}>
-        <Photo />
-        <div className={style.containerSelectLang}>
-          <SelectLang />
-        </div>
-      </div>
-    </LangContextProvider>
-  );
+    return (
+        <LangContextProvider>
+            <div className={style.index}>
+                <Photo />
+                <div className={style.containerSelectLang}>
+                    <SelectLang />
+                </div>
+                <div></div>
+            </div>
+        </LangContextProvider>
+    );
 };

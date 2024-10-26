@@ -4,14 +4,14 @@ import { FC } from 'react';
 import style from './index.module.scss';
 
 interface IProps {
-  className?: string;
-  name: string;
+    className?: string;
+    name: string;
 }
 
 export const Icon: FC<IProps> = ({ className, name }) => {
-  return (
-    <svg className={stylesConcat(style.index, className)}>
-      <use xlinkHref={`${sprite}#${name}`} />
-    </svg>
-  );
+    return (
+        <svg className={stylesConcat(style.index, className)}>
+            <use xlinkHref={`${sprite}#${name}`} />
+        </svg>
+    );
 };

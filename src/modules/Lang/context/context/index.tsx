@@ -3,13 +3,13 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
 
 export interface IContextData {
-  label: string;
-  value: string;
+    label: string;
+    value: string;
 }
 
 export interface IContext {
-  data?: IContextData;
-  setData?: Dispatch<SetStateAction<IContextData | undefined>>;
+    data?: IContextData;
+    setData?: Dispatch<SetStateAction<IContextData | undefined>>;
 }
 
 export type TContext = IContext | undefined;
