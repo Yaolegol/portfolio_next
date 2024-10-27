@@ -1,8 +1,8 @@
 'use client';
 
+import { IntlMessage } from '@/modules/Lang/components/IntlMessage';
 import { FC } from 'react';
 import style from './index.module.scss';
-import { IntlMessage } from '@/modules/Lang/components/IntlMessage';
 
 export const Title: FC = () => {
     return (
