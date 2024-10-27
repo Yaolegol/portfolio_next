@@ -19,17 +19,20 @@ const selectOptions = [
 export const SelectLang: FC = () => {
     const { setLangOption, setLangText } = useContext(LangContext);
 
-    const fetchText = useCallback(
+    const importText = useCallback(
         async ({ value }: IOption) => {
             try {
-                const response = await fetch(`/text/home/${value}/index.json`);
-                const text = await response.json();
+                const data = await import(
+                    `@/modules/Home/text/${value}/index.json`
+                );
 
-                if (!response.ok) {
+                const json = data.default;
+
+                if (!json) {
                     return;
                 }
 
-                setLangText?.(text);
+                setLangText?.(json);
             } catch (e) {
                 console.log(e);
             }
@@ -40,9 +43,9 @@ export const SelectLang: FC = () => {
     const handleSelect = useCallback(
         (option: IOption) => {
             setLangOption?.(option);
-            fetchText(option);
+            importText(option);
         },
-        [fetchText, setLangOption],
+        [importText, setLangOption],
     );
 
     return (
