@@ -1,6 +1,7 @@
 'use client';
 
-import { createContext, Dispatch, SetStateAction } from 'react';
+import { IOption } from '@/components/Select';
+import { createContext } from 'react';
 
 export interface IContextData {
     label: string;
@@ -10,8 +11,7 @@ export interface IContextData {
 export interface IContext {
     langOption?: IContextData;
     langText?: any;
-    setLangOption?: Dispatch<SetStateAction<IContextData | undefined>>;
-    setLangText?: Dispatch<SetStateAction<any>>;
+    onLangChange?: (option: IOption) => void;
 }
 
 export const LangContext = createContext<IContext>({});
