@@ -10,7 +10,9 @@ import style from './index.module.scss';
 export const Home: FC = () => {
     return (
         <div className={style.index}>
-            <Photo />
+            <div className={style.photoContainer}>
+                <Photo />
+            </div>
             <div className={style.container}>
                 <SelectLang />
             </div>
