@@ -1,6 +1,7 @@
 import { Contacts } from '@/modules/Home/components/Contacts';
 import { Description } from '@/modules/Home/components/Description';
 import { Photo } from '@/modules/Home/components/Photo';
+import { SocialNetworks } from '@/modules/Home/components/SocialNetworks';
 import { Title } from '@/modules/Home/components/Title';
 import { SelectLang } from '@/modules/Lang/components/SelectLang';
 import { FC } from 'react';
@@ -23,6 +24,9 @@ export const Home: FC = () => {
             </div>
             <div className={style.container}>
                 <Contacts />
+            </div>
+            <div className={style.containerSocial}>
+                <SocialNetworks />
             </div>
         </div>
     );
