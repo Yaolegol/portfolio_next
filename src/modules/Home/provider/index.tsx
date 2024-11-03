@@ -2,7 +2,9 @@
 
 import { IOption } from '@/components/Select';
 import { getLangText } from '@/helpers/lang';
-import { IContextData, LangContext } from '@/modules/Lang/context';
+import { TAB_ID_PROJECTS } from '@/modules/Home/constants';
+import { HomePageContext } from '@/modules/Home/context';
+import { ILangData } from '@/modules/Lang/types';
 import { FC, useState, ReactNode, useCallback } from 'react';
 
 interface IProps {
@@ -16,9 +18,9 @@ export const LangContextProvider: FC<IProps> = ({
     defaultLangOption,
     defaultLangText,
 }) => {
-    const [langOption, setLangOption] =
-        useState<IContextData>(defaultLangOption);
+    const [langOption, setLangOption] = useState<ILangData>(defaultLangOption);
     const [langText, setLangText] = useState<any>(defaultLangText);
+    const [activeTab, setActiveTab] = useState<number>(TAB_ID_PROJECTS);
 
     const importText = useCallback(
         async ({ value }: IOption) => {
@@ -38,8 +40,16 @@ export const LangContextProvider: FC<IProps> = ({
     );
 
     return (
-        <LangContext.Provider value={{ langOption, langText, onLangChange }}>
+        <HomePageContext.Provider
+            value={{
+                activeTab,
+                langOption,
+                langText,
+                onLangChange,
+                setActiveTab,
+            }}
+        >
             {children}
-        </LangContext.Provider>
+        </HomePageContext.Provider>
     );
 };

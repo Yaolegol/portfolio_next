@@ -4,16 +4,30 @@ import { IntlMessage } from '@/modules/Lang/components/IntlMessage';
 import { Icon } from '@/components/Icon';
 import { FC } from 'react';
 import style from './index.module.scss';
+import { stylesConcat } from '@/helpers/styles';
 
 interface IProps {
+    activeId?: number;
     icon: string;
-    onClick: () => void;
+    id: number;
+    onClick: (id: number) => void;
     title: string;
 }
 
-export const Tab: FC<IProps> = ({ icon, onClick, title }) => {
+export const Tab: FC<IProps> = ({ activeId, icon, id, onClick, title }) => {
+    const handleClick = () => {
+        onClick(id);
+    };
+
     return (
-        <button className={style.index} onClick={onClick} type="button">
+        <button
+            className={stylesConcat(
+                style.index,
+                activeId === id ? style.active : '',
+            )}
+            onClick={handleClick}
+            type="button"
+        >
             <Icon className={style.icon} name={icon} />
             <span className={style.title}>
                 <IntlMessage id={title} />

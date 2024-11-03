@@ -1,6 +1,6 @@
 import { getServerLangData } from '@/helpers/lang/server';
 import { Home } from '@/modules/Home';
-import { LangContextProvider } from '@/modules/Lang/provider';
+import { LangContextProvider } from '../modules/Home/provider';
 import { Layout } from '@/modules/Layout';
 import { Metadata, NextPage } from 'next';
 
