@@ -1,0 +1,9 @@
+.item {
+    display: block;
+    font-weight: 700;
+    margin-top: 10px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
