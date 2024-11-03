@@ -7,7 +7,7 @@ import style from './index.module.scss';
 
 export const Contacts: FC = () => {
     return (
-        <div>
+        <div className={style.index}>
             <a className={style.item} href={`tel:${PHONE}`}>
                 <IntlMessage id="main.phone" />: {PHONE}
             </a>
