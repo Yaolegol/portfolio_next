@@ -1,2 +1,13 @@
-.index {
+.aboutContainer {
+    display: none;
+
+    .about & {
+        display: block;
+    }
+}
+
+.projectsContainer {
+    .about & {
+        display: none;
+    }
 }

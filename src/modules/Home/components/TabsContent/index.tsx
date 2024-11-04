@@ -20,6 +20,7 @@ export const TabsContent: FC = () => {
             <div className={style.aboutContainer}>
                 <About />
             </div>
+            <div className={style.projectsContainer}>test</div>
         </div>
     );
 };
