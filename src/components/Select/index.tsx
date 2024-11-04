@@ -1,7 +1,7 @@
 'use client';
 
 import { Icon } from '@/components/Icon';
-import { stylesConcat } from '@/helpers/styles';
+import { styles } from '@/helpers/styles';
 import { FC, FocusEvent, useCallback, useMemo, useRef, useState } from 'react';
 import style from './index.module.scss';
 
@@ -62,7 +62,7 @@ export const Select: FC<IProps> = ({ onSelect, options }) => {
 
     return (
         <div
-            className={stylesConcat(style.index, isOpen ? style.open : '')}
+            className={styles(style.index, isOpen ? style.open : '')}
             ref={ref}
         >
             <button

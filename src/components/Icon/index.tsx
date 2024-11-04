@@ -1,4 +1,4 @@
-import { stylesConcat } from '@/helpers/styles';
+import { styles } from '@/helpers/styles';
 import { sprite } from '@public/sprite-manifest.json';
 import { FC } from 'react';
 import style from './index.module.scss';
@@ -10,7 +10,7 @@ interface IProps {
 
 export const Icon: FC<IProps> = ({ className, name }) => {
     return (
-        <svg className={stylesConcat(style.index, className)}>
+        <svg className={styles(style.index, className)}>
             <use xlinkHref={`${sprite}#${name}`} />
         </svg>
     );

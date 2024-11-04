@@ -3,6 +3,7 @@ import { Description } from '@/modules/Home/components/Description';
 import { Photo } from '@/modules/Home/components/Photo';
 import { SocialNetworks } from '@/modules/Home/components/SocialNetworks';
 import { Tabs } from '@/modules/Home/components/Tabs';
+import { TabsContent } from '@/modules/Home/components/TabsContent';
 import { Title } from '@/modules/Home/components/Title';
 import { SelectLang } from '@/modules/Lang/components/SelectLang';
 import { FC } from 'react';
@@ -33,6 +34,9 @@ export const Home: FC = () => {
             </div>
             <div className={style.container}>
                 <Tabs />
+            </div>
+            <div className={style.container}>
+                <TabsContent />
             </div>
         </div>
     );

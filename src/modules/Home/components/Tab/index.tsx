@@ -4,7 +4,7 @@ import { IntlMessage } from '@/modules/Lang/components/IntlMessage';
 import { Icon } from '@/components/Icon';
 import { FC } from 'react';
 import style from './index.module.scss';
-import { stylesConcat } from '@/helpers/styles';
+import { styles } from '@/helpers/styles';
 
 interface IProps {
     activeId?: number;
@@ -21,10 +21,7 @@ export const Tab: FC<IProps> = ({ activeId, icon, id, onClick, title }) => {
 
     return (
         <button
-            className={stylesConcat(
-                style.index,
-                activeId === id ? style.active : '',
-            )}
+            className={styles(style.index, activeId === id ? style.active : '')}
             onClick={handleClick}
             type="button"
         >
