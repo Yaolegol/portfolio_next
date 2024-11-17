@@ -6,7 +6,7 @@
 
 .buttonOpen {
     align-items: center;
-    border: 1px solid $gray-10;
+    border: 1px solid $gray;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
@@ -16,7 +16,7 @@
 
 .contentArea {
     background-color: $white;
-    border: 1px solid $gray-10;
+    border: 1px solid $gray;
     border-radius: 8px;
     display: none;
     left: 0;
@@ -32,7 +32,7 @@
 }
 
 .iconArrow {
-    color: $gray-10;
+    color: $gray;
 
     .open & {
         transform: rotate(180deg);
@@ -47,6 +47,6 @@
     width: 100%;
 
     &:hover {
-        background-color: $gray-1;
+        background-color: $gray-10;
     }
 }
