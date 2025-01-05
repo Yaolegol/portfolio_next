@@ -1,0 +1,8 @@
+@import "/src/styles/font";
+
+.title {
+    @include f_h1;
+
+    display: inline-block;
+    margin-top: 45px;
+}

@@ -5,6 +5,7 @@ import { FC } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import style from './index.module.scss';
+import { Portfolio } from '@/modules/Home/components/Projects/Project/Portfolio';
 
 interface IProps {
     onSwiper: (swiper: SwiperClass) => void;
@@ -13,14 +14,16 @@ interface IProps {
 export const Slider: FC<IProps> = ({ onSwiper }) => {
     return (
         <div className={style.index}>
-            <Swiper onSwiper={onSwiper}>
+            <Swiper autoHeight onSwiper={onSwiper}>
                 <SwiperSlide className={style.slide}>
                     <div className={style.card}>
                         <Frutostore />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={style.slide}>
-                    <div className={style.card}>test</div>
+                    <div className={style.card}>
+                        <Portfolio />
+                    </div>
                 </SwiperSlide>
             </Swiper>
         </div>

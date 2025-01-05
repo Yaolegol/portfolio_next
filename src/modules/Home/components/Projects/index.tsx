@@ -14,7 +14,9 @@ export const Projects: FC = () => {
                 <SliderPrevButton swiper={swiper} />
                 <SliderNextButton swiper={swiper} />
             </div>
-            <Slider onSwiper={setSwiper} />
+            <div className={style.slider}>
+                <Slider onSwiper={setSwiper} />
+            </div>
         </div>
     );
 };
