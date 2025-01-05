@@ -1,9 +1,11 @@
 'use client';
 
 import { IOption } from '@/components/Select';
+import { setCookie } from '@/helpers/cookie';
 import { getLangText } from '@/helpers/lang';
 import { TAB_ID_PROJECTS } from '@/modules/Home/constants';
 import { HomePageContext } from '@/modules/Home/context';
+import { LANG_COOKIE_NAME } from '@/modules/Lang/constants';
 import { ILangData } from '@/modules/Lang/types';
 import { FC, useState, ReactNode, useCallback } from 'react';
 
@@ -35,6 +37,7 @@ export const LangContextProvider: FC<IProps> = ({
         (option: IOption) => {
             setLangOption(option);
             importText(option);
+            setCookie(LANG_COOKIE_NAME, option.value);
         },
         [importText],
     );

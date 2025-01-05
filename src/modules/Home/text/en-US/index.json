@@ -75,5 +75,7 @@
     "projects.portfolio.features.1": "Locale selection",
     "projects.portfolio.lastUpdate": "Last update: 05.01.2025",
     "projects.portfolio.title": "Portfolio",
-    "projects.portfolio.webServer": "Nginx"
+    "projects.portfolio.webServer": "Nginx",
+    "select.lang.ru": "RU",
+    "select.lang.en": "EN"
 }

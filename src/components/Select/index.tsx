@@ -1,6 +1,15 @@
 import { Icon } from '@/components/Icon';
 import { styles } from '@/helpers/styles';
-import { FC, FocusEvent, useCallback, useMemo, useRef, useState } from 'react';
+import { IntlMessage } from '@/modules/Lang/components/IntlMessage';
+import {
+    FC,
+    FocusEvent,
+    useCallback,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from 'react';
 import style from './index.module.scss';
 
 export interface IOption {
@@ -9,14 +18,33 @@ export interface IOption {
 }
 
 interface IProps {
+    defaultSelectedOptionIndex?: number;
     onSelect: (option: IOption) => void;
     options: IOption[];
 }
 
-export const Select: FC<IProps> = ({ onSelect, options }) => {
+export const Select: FC<IProps> = ({
+    defaultSelectedOptionIndex = 0,
+    onSelect,
+    options,
+}) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedValue, setSelectedValue] = useState(options[0]);
+    const [defaultSelectedIndexState, setDefaultSelectedIndexState] = useState(
+        defaultSelectedOptionIndex,
+    );
+    const [selectedValue, setSelectedValue] = useState(
+        options[defaultSelectedOptionIndex],
+    );
+
+    useEffect(() => {
+        if (defaultSelectedIndexState === defaultSelectedOptionIndex) {
+            return;
+        }
+
+        setDefaultSelectedIndexState(defaultSelectedOptionIndex);
+        setSelectedValue(options[defaultSelectedOptionIndex]);
+    }, [defaultSelectedIndexState, defaultSelectedOptionIndex, options]);
 
     const handleBlur = (e: FocusEvent<HTMLButtonElement>) => {
         if (ref.current?.contains(e.relatedTarget)) {
@@ -52,7 +80,7 @@ export const Select: FC<IProps> = ({ onSelect, options }) => {
                     onClick={handleOptionClick(option)}
                     type="button"
                 >
-                    {label}
+                    <IntlMessage id={label} />
                 </button>
             );
         });
@@ -69,7 +97,7 @@ export const Select: FC<IProps> = ({ onSelect, options }) => {
                 onBlur={handleBlur}
                 type="button"
             >
-                {selectedValue.label}
+                <IntlMessage id={selectedValue.label} />
                 <Icon className={style.iconArrow} name="arrow" />
             </button>
             <div className={style.contentArea}>{_options}</div>
