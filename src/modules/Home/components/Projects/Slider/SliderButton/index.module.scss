@@ -13,6 +13,10 @@
     padding: 20px;
     transition: all $transitionDefault;
 
+    @media #{$mobile_max} {
+        padding: 10px;
+    }
+
     &:hover {
         border-color: $blue;
     }

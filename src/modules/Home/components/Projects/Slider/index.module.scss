@@ -1,5 +1,12 @@
+@import '/src/styles/adaptive';
+@import '/src/styles/layout';
+
 .index {
     position: relative;
+
+    @media #{$tablet_max} {
+        @include layout-negative-margin;
+    }
 }
 
 .card {

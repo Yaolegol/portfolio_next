@@ -1,3 +1,4 @@
+@import "/src/styles/adaptive";
 @import "/src/styles/colors";
 @import "/src/styles/font";
 @import "/src/styles/shadow";
@@ -45,6 +46,10 @@
     display: inline-block;
     margin-top: 40px;
     padding: 20px 60px;
+
+    @media #{$mobile_max} {
+        padding: 20px;
+    }
 }
 
 .title {

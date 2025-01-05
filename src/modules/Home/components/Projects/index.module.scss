@@ -1,10 +1,20 @@
+@import '/src/styles/adaptive';
+
 .arrows {
     align-items: center;
     display: flex;
     gap: 40px;
     justify-content: center;
+
+    @media #{$mobile_max} {
+        gap: 20px;
+    }
 }
 
 .slider {
     margin-top: 20px;
+
+    @media #{$mobile_max} {
+        margin-top: 40px;
+    }
 }
