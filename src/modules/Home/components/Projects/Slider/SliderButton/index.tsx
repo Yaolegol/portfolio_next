@@ -4,23 +4,30 @@ import { FC } from 'react';
 import style from './index.module.scss';
 
 interface IProps {
-    className: string;
     disabled?: boolean;
+    isPrev?: boolean;
     onClick: () => void;
+    title: string;
 }
 
-export const SliderButton: FC<IProps> = ({ className, disabled, onClick }) => {
+export const SliderButton: FC<IProps> = ({
+    disabled,
+    isPrev,
+    onClick,
+    title,
+}) => {
     return (
         <button
             className={styles(
                 style.index,
-                className,
+                isPrev ? style.prev : '',
                 disabled ? style.disabled : '',
             )}
             onClick={onClick}
             type="button"
         >
-            <Icon className={style.icon} name="arrow" />
+            <span>{title}</span>
+            <Icon className={style.icon} name="arrow-right" />
         </button>
     );
 };

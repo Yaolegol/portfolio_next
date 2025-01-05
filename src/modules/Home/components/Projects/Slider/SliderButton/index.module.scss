@@ -1,38 +1,39 @@
 @import "@/styles/adaptive";
 @import "@/styles/colors";
+@import "@/styles/transition";
 
 .index {
     align-items: center;
     background: $white;
     border: 1px solid $gray;
-    border-radius: 50%;
+    border-radius: 20px;
     cursor: pointer;
     display: flex;
-    height: 60px;
-    justify-content: center;
-    width: 60px;
+    gap: 20px;
+    padding: 20px;
+    transition: all $transitionDefault;
+
+    &:hover {
+        border-color: $blue;
+    }
 
     &.disabled {
+        color: $gray;
         cursor: default;
         pointer-events: none;
-    }
-    
-    @media #{$tablet_max} {
-        height: 30px;
-        width: 30px;
     }
 }
 
 .icon {
-    height: 32px;
-    width: 32px;
+    color: $blue;
+    transition: all $transitionDefault;
+
+    .prev & {
+        order: -1;
+        transform: rotate(180deg);
+    }
 
     .disabled & {
         color: $gray;
-    }
-    
-    @media #{$tablet_max} {
-        height: 16px;
-        width: 16px;
     }
 }

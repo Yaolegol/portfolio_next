@@ -1,7 +1,6 @@
 import { SliderButton } from '@/modules/Home/components/Projects/Slider/SliderButton';
 import { FC, useCallback, useEffect, useState } from 'react';
 import { SwiperClass } from 'swiper/react';
-import style from './index.module.scss';
 
 interface IProps {
     swiper?: SwiperClass;
@@ -26,9 +25,9 @@ export const SliderNextButton: FC<IProps> = ({ swiper }) => {
 
     return (
         <SliderButton
-            className={style.index}
             disabled={isEnd}
             onClick={handleNext}
+            title="Следующий проект"
         />
     );
 };
