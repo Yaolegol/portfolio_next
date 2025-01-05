@@ -1,5 +1,5 @@
+@import '/src/styles/layout';
+
 .layout {
-    margin: 0 auto;
-    max-width: 1920px;
-    padding: 0 48px;
+    @include layout-container;
 }
