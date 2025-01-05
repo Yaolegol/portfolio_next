@@ -1,5 +1,3 @@
-'use client';
-
 import { Icon } from '@/components/Icon';
 import { styles } from '@/helpers/styles';
 import { FC, FocusEvent, useCallback, useMemo, useRef, useState } from 'react';
