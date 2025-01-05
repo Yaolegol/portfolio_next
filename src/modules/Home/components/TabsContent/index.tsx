@@ -2,6 +2,7 @@
 
 import { styles } from '@/helpers/styles';
 import { About } from '@/modules/Home/components/About';
+import { Slider } from '@/modules/Home/components/Projects/Slider';
 import { TAB_ID_ABOUT_ME } from '@/modules/Home/constants';
 import { HomePageContext } from '@/modules/Home/context';
 import { FC, useContext } from 'react';
@@ -20,7 +21,9 @@ export const TabsContent: FC = () => {
             <div className={style.aboutContainer}>
                 <About />
             </div>
-            <div className={style.projectsContainer}>test</div>
+            <div className={style.projectsContainer}>
+                <Slider />
+            </div>
         </div>
     );
 };

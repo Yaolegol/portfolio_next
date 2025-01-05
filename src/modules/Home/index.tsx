@@ -35,7 +35,7 @@ export const Home: FC = () => {
             <div className={style.container}>
                 <Tabs />
             </div>
-            <div className={style.container}>
+            <div className={style.tabs}>
                 <TabsContent />
             </div>
         </div>
