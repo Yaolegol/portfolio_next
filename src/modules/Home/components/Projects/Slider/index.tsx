@@ -14,12 +14,12 @@ export const Slider: FC<IProps> = ({ onSwiper }) => {
     return (
         <div className={style.index}>
             <Swiper onSwiper={onSwiper}>
-                <SwiperSlide>
+                <SwiperSlide className={style.slide}>
                     <div className={style.card}>
                         <Frutostore />
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className={style.slide}>
                     <div className={style.card}>test</div>
                 </SwiperSlide>
             </Swiper>
