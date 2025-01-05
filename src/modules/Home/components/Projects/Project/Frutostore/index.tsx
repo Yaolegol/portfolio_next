@@ -1,25 +1,34 @@
 import { ProjectCard } from '@/modules/Home/components/Projects/Project/common/ProjectCard';
 import { FC } from 'react';
 
+const CLIENT_FEATURES = [
+    'projects.frutostore.clientFeatures.1',
+    'projects.frutostore.clientFeatures.2',
+    'projects.frutostore.clientFeatures.3',
+];
+
+const FEATURES = [
+    'projects.frutostore.features.1',
+    'projects.frutostore.features.2',
+];
+
+const SERVER_FEATURES = [
+    'projects.frutostore.serverFeatures.1',
+    'projects.frutostore.serverFeatures.2',
+];
+
 export const Frutostore: FC = () => {
     return (
         <ProjectCard
-            clientFeatures={[
-                'Next js',
-                'В проекте используется только 1 библиотека Swiper',
-                'остальное сделано самостоятельно',
-            ]}
-            description="Интернет магазин"
-            features={[
-                'Выбор локали, фильтры, сортировка, пагинация работают через api',
-                'Корзина пользователя работает через localStorage',
-            ]}
-            href="/"
+            clientFeatures={CLIENT_FEATURES}
+            description="projects.frutostore.description"
+            features={FEATURES}
+            href="https://frutostore.oleg-oleinik.com/"
             img="/images/projects/Frutostore.png"
-            lastUpdate="Последнее обновление: 05.01.2025"
-            serverFeatures={['Laravel, MySql']}
-            title="Frutostore"
-            webServer="Nginx"
+            lastUpdate="projects.frutostore.lastUpdate"
+            serverFeatures={SERVER_FEATURES}
+            title="projects.frutostore.title"
+            webServer="projects.frutostore.webServer"
         />
     );
 };
