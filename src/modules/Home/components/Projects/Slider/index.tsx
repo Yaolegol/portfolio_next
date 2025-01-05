@@ -1,5 +1,3 @@
-'use client';
-
 import { Frutostore } from '@/modules/Home/components/Projects/Project/Frutostore';
 import { Portfolio } from '@/modules/Home/components/Projects/Project/Portfolio';
 import { FC } from 'react';
