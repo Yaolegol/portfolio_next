@@ -1,15 +1,13 @@
-'use client';
-
-import { AboutAge } from '@/modules/Home/components/AboutAge';
-import { AboutCity } from '@/modules/Home/components/AboutCity';
-import { AboutEducation } from '@/modules/Home/components/AboutEducation';
-import { AboutHomeExperience } from '@/modules/Home/components/AboutHomeExperience';
-import { AboutInterests } from '@/modules/Home/components/AboutInterests';
-import { AboutProductionExperience } from '@/modules/Home/components/AboutProductionExperience';
-import { AboutUseInProduction } from '@/modules/Home/components/AboutUseInProduction';
-import { AboutWorkExperience } from '@/modules/Home/components/AboutWorkExperience';
-import { AboutWorkTasks } from '@/modules/Home/components/AboutWorkTasks';
-import { FC } from 'react';
+import { AboutAge } from '@/modules/Home/components/About/AboutAge';
+import { AboutCity } from '@/modules/Home/components/About/AboutCity';
+import { AboutProductionExperience } from '@/modules/Home/components/About/AboutProductionExperience';
+import { AboutUseInProduction } from '@/modules/Home/components/About/AboutUseInProduction';
+import { AboutEducation } from '@/modules/Home/components/About/AboutEducation';
+import { AboutInterests } from '@/modules/Home/components/About/AboutInterests';
+import { AboutHomeExperience } from '@/modules/Home/components/About/AboutHomeExperience';
+import { AboutWorkExperience } from '@/modules/Home/components/About/AboutWorkExperience';
+import { AboutWorkTasks } from '@/modules/Home/components/About/AboutWorkTasks';
+import React, { FC } from 'react';
 import style from './index.module.scss';
 
 export const About: FC = () => {
