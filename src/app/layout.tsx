@@ -1,12 +1,16 @@
+import { ReactNode } from 'react';
 import '@/styles/index.scss';
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+interface IProps {
+    children: ReactNode;
+}
+
+export default function RootLayout({ children }: IProps) {
     return (
-        <html lang="en">
+        <html lang="ru-RU">
+            <head>
+                <link rel="icon" href="/favicon.svg" />
+            </head>
             <body>{children}</body>
         </html>
     );
