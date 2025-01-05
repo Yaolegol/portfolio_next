@@ -1,11 +1,11 @@
 'use client';
 
 import { Frutostore } from '@/modules/Home/components/Projects/Project/Frutostore';
+import { Portfolio } from '@/modules/Home/components/Projects/Project/Portfolio';
 import { FC } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import style from './index.module.scss';
-import { Portfolio } from '@/modules/Home/components/Projects/Project/Portfolio';
 
 interface IProps {
     onSwiper: (swiper: SwiperClass) => void;
