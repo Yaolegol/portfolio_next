@@ -13,31 +13,31 @@ import style from './index.module.scss';
 export const About: FC = () => {
     return (
         <div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutProductionExperience />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutUseInProduction />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutAge />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutCity />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutEducation />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutWorkExperience />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutInterests />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutHomeExperience />
             </div>
-            <div className={style.offset}>
+            <div className={style.container}>
                 <AboutWorkTasks />
             </div>
         </div>
