@@ -2,7 +2,6 @@
 module.exports = {
     apps: [
         {
-            args: '-p 80',
             env: {
                 NODE_ENV: 'production',
             },
