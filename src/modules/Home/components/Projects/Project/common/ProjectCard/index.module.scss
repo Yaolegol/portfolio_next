@@ -48,7 +48,8 @@
     padding: 20px 60px;
 
     @media #{$mobile_max} {
-        padding: 20px;
+        margin-top: 20px;
+        padding: 10px 20px;
     }
 }
 
