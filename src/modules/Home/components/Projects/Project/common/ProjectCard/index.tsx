@@ -3,11 +3,14 @@ import { Title } from '@/modules/Home/components/Projects/Project/common/Title';
 import { IntlMessage } from '@/modules/Lang/components/IntlMessage';
 import { FC } from 'react';
 import style from './index.module.scss';
+import { GitLink } from '@/components/GitLink';
 
 interface IProps {
     clientFeatures: string[];
     description: string;
     features: string[];
+    gitClientLink?: string;
+    gitServerLink?: string;
     href?: string;
     img: string;
     lastUpdate: string;
@@ -21,6 +24,8 @@ export const ProjectCard: FC<IProps> = ({
     description,
     features,
     href,
+    gitClientLink,
+    gitServerLink,
     img,
     lastUpdate,
     serverFeatures,
@@ -53,6 +58,11 @@ export const ProjectCard: FC<IProps> = ({
                             );
                         })}
                     </ul>
+                    {gitClientLink && (
+                        <div className={style.git}>
+                            <GitLink link={gitClientLink} />
+                        </div>
+                    )}
                 </div>
                 {serverFeatures && (
                     <div className={style.bodyItem}>
@@ -68,6 +78,11 @@ export const ProjectCard: FC<IProps> = ({
                                 );
                             })}
                         </ul>
+                        {gitServerLink && (
+                            <div className={style.git}>
+                                <GitLink link={gitServerLink} />
+                            </div>
+                        )}
                     </div>
                 )}
                 <div className={style.bodyItem}>

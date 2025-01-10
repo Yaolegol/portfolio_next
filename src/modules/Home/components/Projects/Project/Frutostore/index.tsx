@@ -23,6 +23,8 @@ export const Frutostore: FC = () => {
             clientFeatures={CLIENT_FEATURES}
             description="projects.frutostore.description"
             features={FEATURES}
+            gitClientLink="https://github.com/Yaolegol/frutostore_next"
+            gitServerLink="https://github.com/Yaolegol/rest_api_frutostore/tree/master"
             href="https://frutostore.oleg-oleinik.com/"
             img="/images/projects/Frutostore.png"
             lastUpdate="projects.frutostore.lastUpdate"

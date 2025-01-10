@@ -15,6 +15,7 @@ export const Portfolio: FC = () => {
             clientFeatures={CLIENT_FEATURES}
             description="projects.portfolio.description"
             features={FEATURES}
+            gitClientLink="https://github.com/Yaolegol/portfolio_next"
             img="/images/projects/Cats.png"
             lastUpdate="projects.portfolio.lastUpdate"
             title="projects.portfolio.title"

@@ -8,20 +8,20 @@
     text-align: center;
 }
 
-.description {
-    font-style: italic;
-}
-
-.featureDescription {
-    margin-top: 5px;
-}
-
 .bodyItem {
     margin-top: 20px;
 
     &:first-child {
         margin-top: 0;
     }
+}
+
+.description {
+    font-style: italic;
+}
+
+.featureDescription {
+    margin-top: 5px;
 }
 
 .featureTitle {
@@ -32,6 +32,12 @@
 
 .header {
     text-align: center;
+}
+
+.git {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .image {
