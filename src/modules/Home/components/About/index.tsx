@@ -10,7 +10,7 @@ export const About: FC = () => {
                     <IntlMessage id="about.workExperienceFrontend.title" />
                 </div>
                 <div className={style.bold}>
-                    4+ <IntlMessage id="main.workExperience.measure" />
+                    5+ <IntlMessage id="main.workExperience.measure" />
                 </div>
             </div>
             <div className={style.container}>

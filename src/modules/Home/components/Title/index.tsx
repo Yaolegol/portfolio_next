@@ -17,7 +17,7 @@ export const Title: FC = () => {
                 <IntlMessage id="main.workExperience" />
                 <div className={style.years}>
                     {' '}
-                    4+ <IntlMessage id="main.workExperience.measure" />
+                    5+ <IntlMessage id="main.workExperience.measure" />
                 </div>
             </div>
         </div>
