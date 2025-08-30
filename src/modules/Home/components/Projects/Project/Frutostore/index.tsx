@@ -10,6 +10,9 @@ const CLIENT_FEATURES = [
 const FEATURES = [
     'projects.frutostore.features.1',
     'projects.frutostore.features.2',
+    'projects.frutostore.features.3',
+    'projects.frutostore.features.4',
+    'projects.frutostore.features.5',
 ];
 
 const SERVER_FEATURES = [

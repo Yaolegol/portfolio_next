@@ -47,6 +47,20 @@ export const ProjectCard: FC<IProps> = ({
             <div className={style.body}>
                 <div className={style.bodyItem}>
                     <div className={style.featureTitle}>
+                        <IntlMessage id="projects.common.features.title" />
+                    </div>
+                    <ul className={style.featureDescription}>
+                        {features.map((text) => {
+                            return (
+                                <li key={text}>
+                                    <IntlMessage id={text} />
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+                <div className={style.bodyItem}>
+                    <div className={style.featureTitle}>
                         <IntlMessage id="projects.common.client.title" />
                     </div>
                     <ul className={style.featureDescription}>
@@ -92,20 +106,6 @@ export const ProjectCard: FC<IProps> = ({
                     <div className={style.featureDescription}>
                         <IntlMessage id={webServer} />
                     </div>
-                </div>
-                <div className={style.bodyItem}>
-                    <div className={style.featureTitle}>
-                        <IntlMessage id="projects.common.features.title" />
-                    </div>
-                    <ul className={style.featureDescription}>
-                        {features.map((text) => {
-                            return (
-                                <li key={text}>
-                                    <IntlMessage id={text} />
-                                </li>
-                            );
-                        })}
-                    </ul>
                 </div>
             </div>
         </div>
