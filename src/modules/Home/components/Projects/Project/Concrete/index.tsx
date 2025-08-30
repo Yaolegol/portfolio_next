@@ -4,6 +4,7 @@ import { FC } from 'react';
 const CLIENT_FEATURES = [
     'projects.concrete.clientFeatures.1',
     'projects.concrete.clientFeatures.2',
+    'projects.concrete.clientFeatures.3',
 ];
 
 const FEATURES = [
