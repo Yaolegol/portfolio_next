@@ -13,7 +13,7 @@ export const Image: FC<IProps> = ({ href, img, title }) => {
     }
 
     return (
-        <a href={href} target="_blank" rel="noreferrer">
+        <a className={style.link} href={href} target="_blank" rel="noreferrer">
             <img alt={title} className={style.image} src={img} />
         </a>
     );
