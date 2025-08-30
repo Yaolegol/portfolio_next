@@ -102,7 +102,6 @@
     "projects.takeoff.clientFeatures.2": "Использованы swiper, less, webpack, БЭМ методология",
     "projects.takeoff.clientFeatures.3": "Кастомная сборка webpack",
     "projects.takeoff.description": "Landing page",
-    "projects.takeoff.features.1": "Статичная страница",
     "projects.takeoff.lastUpdate": "Последнее обновление: январь 2024",
     "projects.takeoff.title": "Takeoff",
     "projects.takeoff.webServer": "Nginx",

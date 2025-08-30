@@ -102,7 +102,6 @@
     "projects.takeoff.clientFeatures.2": "Uses swiper, less, webpack, BEM methodology for css",
     "projects.takeoff.clientFeatures.3": "Custom webpack config",
     "projects.takeoff.description": "Landing page",
-    "projects.takeoff.features.1": "Static page",
     "projects.takeoff.lastUpdate": "Last update: Jan 2025",
     "projects.takeoff.title": "Takeoff",
     "projects.takeoff.webServer": "Nginx",

@@ -8,7 +8,7 @@ import { GitLink } from '@/components/GitLink';
 interface IProps {
     clientFeatures: string[];
     description: string;
-    features: string[];
+    features?: string[];
     gitClientLink?: string;
     gitServerLink?: string;
     href?: string;
@@ -45,20 +45,22 @@ export const ProjectCard: FC<IProps> = ({
                 </div>
             </div>
             <div className={style.body}>
-                <div className={style.bodyItem}>
-                    <div className={style.featureTitle}>
-                        <IntlMessage id="projects.common.features.title" />
+                {features && (
+                    <div className={style.bodyItem}>
+                        <div className={style.featureTitle}>
+                            <IntlMessage id="projects.common.features.title" />
+                        </div>
+                        <ul className={style.featureDescription}>
+                            {features.map((text) => {
+                                return (
+                                    <li key={text}>
+                                        <IntlMessage id={text} />
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </div>
-                    <ul className={style.featureDescription}>
-                        {features.map((text) => {
-                            return (
-                                <li key={text}>
-                                    <IntlMessage id={text} />
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
+                )}
                 <div className={style.bodyItem}>
                     <div className={style.featureTitle}>
                         <IntlMessage id="projects.common.client.title" />
