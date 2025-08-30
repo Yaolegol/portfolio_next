@@ -54,7 +54,7 @@ export const About: FC = () => {
                 <div className={style.title}>
                     <IntlMessage id="about.age.title" />
                 </div>
-                <div>35</div>
+                <div>36</div>
             </div>
             <div className={style.container}>
                 <div className={style.title}>
@@ -158,6 +158,12 @@ export const About: FC = () => {
                     </div>
                     <div className={style.description}>
                         <IntlMessage id="about.experience.value8" />
+                    </div>
+                    <div className={style.description}>
+                        <IntlMessage id="about.experience.value9" />
+                    </div>
+                    <div className={style.description}>
+                        <IntlMessage id="about.experience.value10" />
                     </div>
                 </div>
             </div>
