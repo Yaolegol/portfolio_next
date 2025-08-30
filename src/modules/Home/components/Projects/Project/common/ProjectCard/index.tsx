@@ -53,7 +53,7 @@ export const ProjectCard: FC<IProps> = ({
                         <ul className={style.featureDescription}>
                             {features.map((text) => {
                                 return (
-                                    <li key={text}>
+                                    <li className={style.listItem} key={text}>
                                         <IntlMessage id={text} />
                                     </li>
                                 );

@@ -21,6 +21,9 @@
 }
 
 .featureDescription {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     margin-top: 5px;
 }
 
@@ -56,6 +59,23 @@
     @media #{$mobile_max} {
         margin-top: 20px;
         padding: 10px 20px;
+    }
+}
+
+.listItem {
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+        background-color: $gray-90;
+        border-radius: 50%;
+        content: '';
+        height: 4px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
     }
 }
 
