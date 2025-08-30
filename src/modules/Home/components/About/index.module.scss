@@ -1,3 +1,15 @@
+.main {
+    padding-bottom: 40px;
+}
+
+.aboutDescription {
+    margin-top: 15px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
 .bold {
     font-weight: 700;
 }

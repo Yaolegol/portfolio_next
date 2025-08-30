@@ -4,7 +4,7 @@ import style from './index.module.scss';
 
 export const About: FC = () => {
     return (
-        <div>
+        <div className={style.main}>
             <div className={style.container}>
                 <div className={style.title}>
                     <IntlMessage id="about.workExperienceFrontend.title" />
@@ -69,7 +69,7 @@ export const About: FC = () => {
                     <IntlMessage id="about.education.title" />
                 </div>
                 <div>
-                    <IntlMessage id="about.education.value2" />
+                    <IntlMessage id="about.education.value1" />
                 </div>
             </div>
             <div className={style.container}>
@@ -135,35 +135,41 @@ export const About: FC = () => {
                     <IntlMessage id="about.experience.title" />
                 </div>
                 <div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value1" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value2" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value3" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value4" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value5" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value6" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value7" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value8" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value9" />
                     </div>
-                    <div className={style.description}>
+                    <div className={style.aboutDescription}>
                         <IntlMessage id="about.experience.value10" />
+                    </div>
+                    <div className={style.aboutDescription}>
+                        <IntlMessage id="about.experience.value11" />
+                    </div>
+                    <div className={style.aboutDescription}>
+                        <IntlMessage id="about.experience.value12" />
                     </div>
                 </div>
             </div>
