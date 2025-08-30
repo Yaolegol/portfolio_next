@@ -5,6 +5,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import style from './index.module.scss';
 import { Concrete } from '@/modules/Home/components/Projects/Project/Concrete';
+import { Takeoff } from '@/modules/Home/components/Projects/Project/Takeoff';
 
 interface IProps {
     onSwiper: (swiper: SwiperClass) => void;
@@ -22,6 +23,11 @@ export const Slider: FC<IProps> = ({ onSwiper }) => {
                 <SwiperSlide className={style.slide}>
                     <div className={style.card}>
                         <Frutostore />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className={style.slide}>
+                    <div className={style.card}>
+                        <Takeoff />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={style.slide}>
