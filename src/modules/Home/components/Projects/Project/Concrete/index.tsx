@@ -34,7 +34,7 @@ export const Concrete: FC = () => {
             gitClientLink="https://github.com/Yaolegol/Concrete"
             gitServerLink="https://github.com/Yaolegol/Concrete/tree/master/server"
             href="https://concrete.oleg-oleinik.com/"
-            img="/images/projects/Frutostore.png"
+            img="/images/projects/concrete.png"
             lastUpdate="projects.concrete.lastUpdate"
             serverFeatures={SERVER_FEATURES}
             title="projects.concrete.title"
